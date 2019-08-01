@@ -1,5 +1,5 @@
 
-variable "instances_tag_name" {
+variable "instances_tags" {
   description = "List of tags to filter the instance to include into AWS Inspect"
   type = map
   default = {"Name" = "*"}

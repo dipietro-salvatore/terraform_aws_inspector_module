@@ -1,21 +1,6 @@
 
-# Declare the data source
-#data "aws_inspector_rules_packages" "rules" {}
-
-# data "aws_instances" "myinstances" {
-#   filter {
-#       name = "tag:Name"
-#       values = flatten(var.instances_tag_name)
-#   }
-#   instance_state_names = ["running", "stopped", "pending", "stopping"]
-# }
-
-# output "instance_ip_addr" {
-#   value = "${data.aws_instance.myinstances}"
-# }
-
 resource "aws_inspector_resource_group" "myinstances" {
-  tags =  var.instances_tag_name
+  tags =  var.instances_tags
 }
 
 resource "aws_inspector_assessment_target" "myinspect" {
