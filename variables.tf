@@ -1,3 +1,8 @@
+variable "create" {
+  description = "Create these objects"
+  type = bool
+  default = true
+}
 
 variable "instances_tags" {
   description = "List of tags to filter the instance to include into AWS Inspect"
